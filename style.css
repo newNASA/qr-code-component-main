@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit";
+}
+
+:root[data-theme="light"] {
+    --body-bg: #d5e1ef;
+    --card-bg: #fff;
+    --dark-color: #1f314f;
+    --text-color: #7d889e;
+    --qr-bg: #2c7dfa;
+    --qr-round: #3685ff;
+}
+
+
+:root[data-theme="dark"] {
+    --body-bg: #19273F;
+    --card-bg: #1f314f;
+    --dark-color: #fff;
+    --text-color: #fff;
+    --qr-bg: var(--body-bg);
+    --qr-round: var(--body-bg);
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+.container {
+    width: 315px;
+    height: 484px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 17px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .svg{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+    color: var(--qr-bg);
+}
+
+.container h2 {
+    width: 254px;
+    color: var(--dark-color);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 9px;
+}
+
+.container p {
+    width: 243px;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 19px;
+}
+
+.theme-toggle-button {
+    position: absolute;
+    z-index: 1;
+    right: 12px;
+    top: 12px;
+    padding: 4px 12px;
+    border: 1px solid var(--dark-color);
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: normal;
+    background-color: transparent;
+    color: var(--dark-color);
+    cursor: pointer;
+}
+
+.theme-toggle-button:hover {
+    background-color: var(--dark-color);
+    color: var(--card-bg);
+}
